@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="icon" type="image/png" href="/src/client/assets/favicon.png" />
+    <meta name="theme-color" content="#000000" />
+    <title>Selfie</title>
+    <style>
+      html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        overflow-x: hidden;
+        width: 100%;
+      }
+      body {
+        touch-action: manipulation;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      html.dark-theme {
+        background-color: #000000;
+        color: #e0e0e0;
+      }
+      html.light-theme {
+        background-color: #f8f7f5;
+        color: #000000;
+      }
+      #root {
+        min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
+      }
+    </style>
+    <script>
+      (function () {
+        var savedTheme = localStorage.getItem("theme");
+        var isDarkMode = savedTheme
+          ? savedTheme === "dark"
+          : window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        document.documentElement.classList.add(
+          isDarkMode ? "dark-theme" : "light-theme",
+        );
+
+        var metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        if (metaThemeColor) {
+          metaThemeColor.setAttribute(
+            "content",
+            isDarkMode ? "#000000" : "#ffffff",
+          );
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root">not rendered body</div>
+
+    <script type="module" src="/src/app-entry-client.jsx"></script>
+  </body>
+</html>
