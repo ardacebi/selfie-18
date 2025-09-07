@@ -4,7 +4,7 @@
 
 ### Authors: Alessandro D'Ambrosio (alessandro.dambrosi3@studio.unibo.it), Arda Çebi (arda.cebi@studio.unibo.it)
 
-## Contributi:
+## Contributi
 
 - Tema Scuro e Chiaro: Arda Çebi
 - Pagina di Login, Sign Up e Password dimenticata: Alessandro D'Ambrosio + Stilizzazione in CSS: Arda Çebi
