@@ -36,7 +36,7 @@ L'IA generativa è stata utilizzata tramite GitHub copilot e solo come aiuto dur
 
 ## Requirements
 
-- Node.js 18.20.x (tested with 18.20.8) or newer LTS
+- Node.js 18.20.x (tested with 18.20.8) LTS
 - npm 9–10
 
 This repo includes an `.nvmrc` set to `v18.20.8`. If you use nvm:
@@ -46,7 +46,7 @@ nvm use
 npm ci
 ```
 
-If you see tarball/EBADARCH/ETIMEDOUT errors on Node 18, align npm to a recent version and clear cache:
+If you see tarball/EBADARCH/ETIMEDOUT or EBADENGINE errors, align npm to a recent version and clear cache:
 
 ```sh
 npm i -g npm@10
